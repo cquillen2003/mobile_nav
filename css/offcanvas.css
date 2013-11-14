@@ -1,0 +1,46 @@
+/* From: http://www.kendoui.com/blogs/teamblog/posts/13-11-05/creating-a-rwd-off-canvas-layout-with-bootstrap-3.aspx */
+
+html {
+  overflow-x: hidden; /* hide the horizontal scrollbar */
+}
+
+html, body, #wrapper-offcanvas {
+  height: 100%;
+}
+
+
+#wrapper-offcanvas {
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.25s ease-in;
+  -moz-transition: left 0.25s ease-in;
+  transition: left 0.25s ease-in;
+}
+
+#wrapper-offcanvas.active {
+  left: 80%;
+}  
+
+#sidebar-offcanvas {
+  left: -80%;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: #F7F7F7;
+  padding: 0;
+}
+
+#sidebar-header {
+	height: 51px;
+	background-color: gray;
+}
+
+#sidebar-offcanvas a {
+	padding: 15px 0 0 20px;
+	height: 45px;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: white;
+	display: block;
+}
